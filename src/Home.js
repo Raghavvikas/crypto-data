@@ -8,6 +8,7 @@ let total = [];
 
 Data.forEach((elem)=>{
     total.push(...elem.tags);
+    // console.log("total: " + total);
 });
 
 const Home = () => {

@@ -6,10 +6,10 @@ import MultiLineGraph from "./MultiLineGraph";
 
 const CryptoTabs = ({ menu }) => {
 
-    const [open, setOpen] = useState(false);
-    const handleGraph = () => {
+    // const [open, setOpen] = useState(false);
+    // const handleGraph = () => {
 
-    }
+    // }
 
   const [menuData, setMenuData] = useState(menu);
   const [pageNum, setPageNum] = useState(0);
@@ -29,8 +29,8 @@ const CryptoTabs = ({ menu }) => {
         <>
             
           <Link to="/multiLineGraph"  style={{ textDecoration: "none" } } >
-            {/* <MultiLineGraph id={coins.id} name={coins.fullName} /> */}
-            <div className="container">
+            <MultiLineGraph id={coins.id} name={coins.fullName} />
+            <div className="container" key={coins.id}>
               <div>
                 <div className="main" key={coins.id}>
                   <h2>Coin Analysis</h2>
@@ -40,8 +40,8 @@ const CryptoTabs = ({ menu }) => {
                   <p>Rank: {coins.rank}</p>
                   <p>Price: {coins.price}</p>
                   <p>Tags: {coins.tags}</p>
-                  <button onClick={() => {setOpen(true)}}>Show Graph</button>
-                  {open && <MultiLineGraph/>}
+                  {/* <button onClick={() => {setOpen(true)}}>Show Graph</button>
+                  {open && <MultiLineGraph id={coins.id} name={coins.name}/>} */}
                 </div>
               </div>
             </div>
